@@ -1,0 +1,1667 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Story ❤️</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --rose: #ff5b9f;
+        --peach: #ffb3c7;
+        --violet: #b993ff;
+        --sky: #7ec8ff;
+        --glow: rgba(255, 91, 159, 0.35);
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(
+            1200px 800px at 10% -10%,
+            rgba(255, 91, 159, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            1000px 700px at 110% 10%,
+            rgba(185, 147, 255, 0.18),
+            transparent 55%
+          ),
+          #050507;
+      }
+
+      .aurora {
+        position: fixed;
+        inset: -20% -10% auto -10%;
+        height: 60vh;
+        background: conic-gradient(
+          from 90deg,
+          rgba(255, 91, 159, 0.25),
+          rgba(126, 200, 255, 0.2),
+          rgba(185, 147, 255, 0.22),
+          rgba(255, 91, 159, 0.2)
+        );
+        filter: blur(60px);
+        opacity: 0.7;
+        z-index: 0;
+        animation: auroraShift 18s ease-in-out infinite alternate;
+        pointer-events: none;
+        will-change: transform, opacity;
+      }
+
+      body.calm-mode .aurora {
+        opacity: 0.25;
+        animation-play-state: paused;
+      }
+
+      @keyframes auroraShift {
+        0% {
+          transform: translateY(-10%) rotate(0deg) scale(1);
+        }
+        100% {
+          transform: translateY(10%) rotate(8deg) scale(1.05);
+        }
+      }
+
+      .floating-hearts {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .floating-hearts span {
+        position: absolute;
+        bottom: -10vh;
+        font-size: 18px;
+        opacity: 0.7;
+        animation: floatHearts 12s linear infinite;
+        filter: drop-shadow(0 0 12px var(--glow));
+        will-change: transform, opacity;
+      }
+
+      body.calm-mode .floating-hearts span {
+        opacity: 0.25;
+        animation-play-state: paused;
+      }
+
+      .floating-hearts span:nth-child(1) {
+        left: 6%;
+        animation-duration: 13s;
+        animation-delay: -2s;
+      }
+      .floating-hearts span:nth-child(2) {
+        left: 18%;
+        animation-duration: 10s;
+        animation-delay: -6s;
+      }
+      .floating-hearts span:nth-child(3) {
+        left: 32%;
+        animation-duration: 15s;
+        animation-delay: -4s;
+      }
+      .floating-hearts span:nth-child(4) {
+        left: 52%;
+        animation-duration: 11s;
+        animation-delay: -1s;
+      }
+      .floating-hearts span:nth-child(5) {
+        left: 68%;
+        animation-duration: 16s;
+        animation-delay: -8s;
+      }
+      .floating-hearts span:nth-child(6) {
+        left: 82%;
+        animation-duration: 12s;
+        animation-delay: -3s;
+      }
+
+      .sparkle-field {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .sparkle-field span {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0)
+        );
+        opacity: 0.6;
+        animation: twinkle 4s ease-in-out infinite;
+        will-change: transform, opacity;
+      }
+
+      body.calm-mode .sparkle-field span {
+        opacity: 0.25;
+        animation-play-state: paused;
+      }
+
+      .sparkle-field span:nth-child(1) {
+        top: 18%;
+        left: 10%;
+        animation-delay: -1s;
+      }
+      .sparkle-field span:nth-child(2) {
+        top: 12%;
+        left: 48%;
+        animation-delay: -2s;
+      }
+      .sparkle-field span:nth-child(3) {
+        top: 22%;
+        left: 80%;
+        animation-delay: -3s;
+      }
+      .sparkle-field span:nth-child(4) {
+        top: 40%;
+        left: 25%;
+        animation-delay: -1.5s;
+      }
+      .sparkle-field span:nth-child(5) {
+        top: 46%;
+        left: 70%;
+        animation-delay: -2.4s;
+      }
+      .sparkle-field span:nth-child(6) {
+        top: 66%;
+        left: 15%;
+        animation-delay: -3.2s;
+      }
+      .sparkle-field span:nth-child(7) {
+        top: 72%;
+        left: 55%;
+        animation-delay: -1.8s;
+      }
+      .sparkle-field span:nth-child(8) {
+        top: 78%;
+        left: 88%;
+        animation-delay: -2.7s;
+      }
+
+      @keyframes twinkle {
+        0% {
+          transform: scale(0.6);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.4);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(0.6);
+          opacity: 0.3;
+        }
+      }
+
+      @keyframes floatHearts {
+        0% {
+          transform: translateY(0) translateX(0) scale(0.9);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(-110vh) translateX(40px) scale(1.4);
+          opacity: 0;
+        }
+      }
+
+      .glow-text {
+        background: linear-gradient(
+          90deg,
+          var(--peach),
+          var(--rose),
+          var(--violet)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 30px rgba(255, 91, 159, 0.35);
+        animation: glowPulse 6s ease-in-out infinite;
+      }
+
+      @keyframes glowPulse {
+        0% {
+          text-shadow: 0 0 22px rgba(255, 91, 159, 0.28);
+        }
+        50% {
+          text-shadow: 0 0 36px rgba(255, 91, 159, 0.55);
+        }
+        100% {
+          text-shadow: 0 0 22px rgba(255, 91, 159, 0.28);
+        }
+      }
+
+      .glass-card {
+        background: rgba(15, 15, 20, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(12px);
+        border-radius: 24px;
+      }
+
+      .hero-float {
+        animation: heroFloat 7s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      @keyframes heroFloat {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 14px;
+      }
+
+      .photo-frame {
+        position: relative;
+        border-radius: 18px;
+        padding: 2px;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 91, 159, 0.4),
+          rgba(126, 200, 255, 0.3),
+          rgba(185, 147, 255, 0.4)
+        );
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+        transform-style: preserve-3d;
+        will-change: transform;
+      }
+
+      .photo-inner {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        background: rgba(10, 10, 12, 0.9);
+      }
+
+      .photo-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 40%,
+          rgba(0, 0, 0, 0.65) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .photo-caption {
+        position: absolute;
+        left: 12px;
+        bottom: 10px;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      }
+
+      .photo-card {
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+        cursor: pointer;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          filter 0.35s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        will-change: transform, filter;
+      }
+
+      .photo-frame:hover .photo-card {
+        transform: scale(1.06);
+        filter: saturate(1.25) brightness(1.05);
+      }
+
+      .photo-frame:hover .photo-overlay {
+        opacity: 1;
+      }
+
+      .photo-card:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 22px 45px rgba(255, 91, 159, 0.2);
+        filter: saturate(1.15);
+      }
+
+      .photo-hidden {
+        display: none;
+      }
+
+      .cta-btn {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(255, 91, 159, 0.35);
+      }
+
+      .cta-btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.35),
+          transparent
+        );
+        transform: translateX(-120%);
+        transition: transform 0.8s ease;
+      }
+
+      .cta-btn:hover::after {
+        transform: translateX(120%);
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 28px;
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 60px rgba(255, 91, 159, 0.12);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.02)
+        );
+        z-index: -1;
+      }
+
+      .emotional-pause {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 32px 24px;
+        margin: -8px auto 0;
+        max-width: 700px;
+        line-height: 1.7;
+        letter-spacing: 0.2px;
+        background: transparent;
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+      }
+
+      .handwritten-note {
+        font-family: "Dancing Script", "Inter", sans-serif;
+        font-style: italic;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.75);
+        padding: 28px 22px;
+        max-width: 720px;
+        margin: 0 auto 18px;
+        line-height: 1.8;
+        letter-spacing: 0.3px;
+        background: transparent;
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+      }
+
+      @media (max-width: 640px) {
+        .photo-grid {
+          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+          gap: 10px;
+        }
+
+        .photo-card {
+          height: 140px;
+        }
+
+        .photo-card:hover {
+          transform: none;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+          filter: none;
+        }
+
+        .photo-frame:hover .photo-card {
+          transform: none;
+          filter: none;
+        }
+
+        .timeline-item {
+          padding: 22px;
+        }
+
+        .section-divider {
+          width: 80%;
+        }
+
+        .emotional-pause,
+        .handwritten-note {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 91, 159, 0.5),
+          transparent
+        );
+        margin: 24px auto 0;
+        width: 60%;
+      }
+
+      .nav-blur {
+        backdrop-filter: blur(12px);
+        background: rgba(8, 8, 12, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(90deg, var(--rose), var(--violet));
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .love-counter {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 0.2px;
+      }
+
+      .play-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 91, 159, 0.12),
+          rgba(185, 147, 255, 0.12)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px;
+        padding: 24px;
+      }
+
+      .range-glow {
+        accent-color: #ff5b9f;
+        width: 100%;
+      }
+
+      .confetti-heart {
+        position: fixed;
+        font-size: 18px;
+        z-index: 60;
+        animation: confettiPop 2.4s ease-out forwards;
+        filter: drop-shadow(0 0 10px var(--glow));
+        pointer-events: none;
+      }
+
+      .lightbox-caption {
+        margin-top: 16px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        letter-spacing: 0.3px;
+      }
+
+      .wish-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(5, 5, 8, 0.85);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 60;
+        backdrop-filter: blur(6px);
+      }
+
+      .wish-overlay.active {
+        display: flex;
+      }
+
+      .wish-card {
+        text-align: center;
+        padding: 28px 24px;
+        border-radius: 20px;
+        background: rgba(15, 15, 20, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        max-width: 420px;
+      }
+
+      .wish-candle {
+        width: 18px;
+        height: 60px;
+        margin: 0 auto 14px;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #fff, #ffd6e7);
+        position: relative;
+      }
+
+      .wish-flame {
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 24px;
+        border-radius: 50% 50% 50% 50%;
+        background: radial-gradient(circle at 50% 40%, #fff4c2, #ff9cc7);
+        animation: flameFlicker 1.6s ease-in-out infinite;
+        filter: drop-shadow(0 0 12px rgba(255, 179, 199, 0.6));
+      }
+
+      .wish-heart {
+        font-size: 28px;
+        margin-bottom: 8px;
+        animation: wishFloat 3s ease-in-out infinite;
+        opacity: 0.9;
+      }
+
+      .wish-text {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .hold-btn {
+        position: relative;
+        touch-action: none;
+        user-select: none;
+      }
+
+      .hold-btn.hold-active {
+        box-shadow: 0 0 35px rgba(255, 179, 199, 0.35);
+      }
+
+      .hold-btn.hold-active::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        animation: holdPulse 1.2s ease-in-out infinite;
+      }
+
+      .hold-message {
+        margin-top: 16px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        opacity: 0;
+        transform: translateY(6px);
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .hold-message.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes holdPulse {
+        0% {
+          opacity: 0.4;
+          transform: scale(0.98);
+        }
+        50% {
+          opacity: 0.9;
+          transform: scale(1.02);
+        }
+        100% {
+          opacity: 0.4;
+          transform: scale(0.98);
+        }
+      }
+
+      @keyframes flameFlicker {
+        0% {
+          transform: translateX(-50%) scale(0.95) rotate(-2deg);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.05) rotate(2deg);
+        }
+        100% {
+          transform: translateX(-50%) scale(0.95) rotate(-2deg);
+        }
+      }
+
+      @keyframes wishFloat {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .story-rail {
+        position: relative;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 91, 159, 0.35)
+        );
+        overflow: hidden;
+      }
+
+      .story-rail::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 91, 159, 0.3),
+          rgba(185, 147, 255, 0.5)
+        );
+        animation: railGlow 4s ease-in-out infinite;
+        opacity: 0.6;
+      }
+
+      .story-heart {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        filter: drop-shadow(0 0 10px var(--glow));
+        animation: heartTravel 6s ease-in-out infinite;
+      }
+
+      .story-step {
+        position: relative;
+        text-align: center;
+      }
+
+      .story-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 999px;
+        margin: 0 auto 8px;
+        background: radial-gradient(
+          circle,
+          #fff 0%,
+          var(--rose) 40%,
+          rgba(255, 91, 159, 0.2) 70%
+        );
+        box-shadow: 0 0 18px rgba(255, 91, 159, 0.5);
+        animation: dotPulse 2.2s ease-in-out infinite;
+      }
+
+      .story-step:nth-child(2) .story-dot {
+        animation-delay: 0.4s;
+      }
+      .story-step:nth-child(3) .story-dot {
+        animation-delay: 0.8s;
+      }
+      .story-step:nth-child(4) .story-dot {
+        animation-delay: 1.2s;
+      }
+
+      .story-label {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+        animation: labelFade 6s ease-in-out infinite;
+      }
+
+      .story-step:nth-child(1) .story-label {
+        animation-delay: 0s;
+      }
+      .story-step:nth-child(2) .story-label {
+        animation-delay: 1.5s;
+      }
+      .story-step:nth-child(3) .story-label {
+        animation-delay: 3s;
+      }
+      .story-step:nth-child(4) .story-label {
+        animation-delay: 4.5s;
+      }
+
+      @keyframes heartTravel {
+        0% {
+          left: 0%;
+          transform: translate(-50%, -50%) scale(0.9);
+        }
+        25% {
+          left: 33%;
+        }
+        50% {
+          left: 66%;
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        75% {
+          left: 100%;
+        }
+        100% {
+          left: 0%;
+          transform: translate(-50%, -50%) scale(0.9);
+        }
+      }
+
+      @keyframes dotPulse {
+        0% {
+          transform: scale(0.9);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(0.9);
+        }
+      }
+
+      @keyframes labelFade {
+        0% {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        20% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        40% {
+          opacity: 0.6;
+        }
+        60% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes railGlow {
+        0% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.9;
+        }
+        100% {
+          opacity: 0.4;
+        }
+      }
+
+      .story-scene {
+        border-radius: 24px;
+        background: rgba(10, 10, 16, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+        padding: 18px;
+      }
+
+      .story-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .scene {
+        opacity: 0;
+        animation: sceneFade 20s infinite;
+      }
+
+      .scene-1 {
+        animation-delay: 0s;
+      }
+      .scene-2 {
+        animation-delay: 2s;
+      }
+      .scene-3 {
+        animation-delay: 4s;
+      }
+      .scene-4 {
+        animation-delay: 6s;
+      }
+      .scene-5 {
+        animation-delay: 8s;
+      }
+      .scene-6 {
+        animation-delay: 10s;
+      }
+      .scene-7 {
+        animation-delay: 12s;
+      }
+      .scene-8 {
+        animation-delay: 14s;
+      }
+      .scene-9 {
+        animation-delay: 16s;
+      }
+      .scene-10 {
+        animation-delay: 18s;
+      }
+
+      @keyframes sceneFade {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        45% {
+          opacity: 1;
+        }
+        60% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .chat-bubble {
+        transform-origin: center;
+        animation: chatPulse 1.6s ease-in-out infinite;
+      }
+
+      @keyframes chatPulse {
+        0% {
+          transform: scale(0.9);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.9);
+          opacity: 0.6;
+        }
+      }
+
+      .walk-left {
+        animation: walkLeft 4s ease-in-out infinite;
+      }
+
+      .walk-right {
+        animation: walkRight 4s ease-in-out infinite;
+      }
+
+      @keyframes walkLeft {
+        0% {
+          transform: translateX(-10px);
+        }
+        50% {
+          transform: translateX(10px);
+        }
+        100% {
+          transform: translateX(-10px);
+        }
+      }
+
+      @keyframes walkRight {
+        0% {
+          transform: translateX(10px);
+        }
+        50% {
+          transform: translateX(-10px);
+        }
+        100% {
+          transform: translateX(10px);
+        }
+      }
+
+      .hand-hold {
+        animation: handHold 2.2s ease-in-out infinite;
+      }
+
+      @keyframes handHold {
+        0% {
+          transform: scaleX(0);
+          opacity: 0.2;
+        }
+        50% {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scaleX(0);
+          opacity: 0.2;
+        }
+      }
+
+      .heart-pop {
+        transform-origin: center;
+        animation: heartPop 1.8s ease-in-out infinite;
+      }
+
+      @keyframes heartPop {
+        0% {
+          transform: scale(0.7);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.15);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.7);
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes confettiPop {
+        0% {
+          transform: translateY(0) scale(0.7);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-220px) scale(1.4) rotate(18deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-neutral-100 overflow-x-hidden relative">
+    <div class="aurora"></div>
+    <div class="floating-hearts">
+      <span>❤</span>
+      <span>💖</span>
+      <span>💗</span>
+      <span>💞</span>
+      <span>💘</span>
+      <span>✨</span>
+    </div>
+    <div class="sparkle-field">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- NAVBAR -->
+    <nav
+      class="nav-blur fixed top-0 inset-x-0 z-40 px-6 py-4 flex items-center justify-between"
+    >
+      <div class="font-semibold tracking-wide text-lg glow-text">Our Story</div>
+      <div class="hidden md:flex items-center gap-6 text-sm text-neutral-200">
+        <a class="nav-link" href="#journey">Timeline</a>
+        <a class="nav-link" href="#play">Play</a>
+        <a class="nav-link" href="#birthday">Birthday</a>
+      </div>
+      <div id="loveCounter" class="love-counter hidden md:block"></div>
+      <button
+        id="surpriseBtn"
+        class="cta-btn px-4 py-2 rounded-full bg-pink-600 hover:bg-pink-500 transition text-sm"
+      >
+        Surprise ✨
+      </button>
+    </nav>
+    <!-- HERO -->
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 relative z-10"
+    >
+      <div class="glass-card hero-float px-8 py-10 md:px-14 md:py-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
+          7 Years. One Beautiful Story.
+        </h1>
+        <p class="text-neutral-300 max-w-xl mb-8">
+          From school-day strangers in 2016–17 to soulmates — thank you, Aditi
+          (my Kismiss), for being my favorite chapter of life.
+        </p>
+        <button
+          id="startJourney"
+          class="cta-btn px-8 py-3 rounded-full bg-pink-600 hover:bg-pink-500 transition"
+        >
+          Start Our Journey ↓
+        </button>
+      </div>
+      <div class="section-divider"></div>
+    </section>
+
+    <!-- PLAY -->
+    <section id="play" class="max-w-4xl mx-auto px-6 pb-8 relative z-10">
+      <div class="play-card glass-card">
+        <div class="flex flex-col md:flex-row md:items-center gap-6">
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold glow-text mb-2">Love Meter 💗</h3>
+            <p class="text-neutral-300">
+              Slide to reveal today’s love level. Every day it points to you.
+            </p>
+          </div>
+          <div class="flex-1">
+            <input
+              id="loveSlider"
+              class="range-glow"
+              type="range"
+              min="0"
+              max="100"
+              value="85"
+            />
+            <div id="loveMessage" class="mt-3 text-neutral-200 font-semibold">
+              85% — still rising, because it’s you.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANIMATED STORY -->
+
+    <!-- TIMELINE -->
+    <section
+      id="journey"
+      class="max-w-5xl mx-auto px-6 py-20 space-y-24 relative z-10"
+    >
+      <div class="flex justify-center">
+        <button
+          id="randomMemoryBtn"
+          class="cta-btn px-6 py-2 rounded-full border border-neutral-700 hover:bg-neutral-800 transition text-sm"
+        >
+          Random Memory ✨
+        </button>
+      </div>
+      <!-- YEAR TEMPLATE -->
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2018 ❤️</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          On September 12, you messaged me — a simple hello that started our
+          forever. After school days in 2016–17 where we barely knew each other,
+          we finally began to talk, laugh, and become the sweetest friends.
+        </p>
+        <div class="photo-grid" id="photos-2018"></div>
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2019 ✈️</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          Late-night chats, endless laughter, and tiny secrets — friendship grew
+          into best friendship. We made our own little world of jokes, calls,
+          and “good morning” messages.
+        </p>
+        <div class="photo-grid" id="photos-2019"></div>
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2020 🏠</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          Distance tested us — you in Bhopal, me in Indore. Video calls, long
+          chats, and little check-ins kept us close when miles tried to pull us
+          apart.
+        </p>
+        <div class="photo-grid" id="photos-2020"></div>
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2021 🌱</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          Long distance, long patience — we argued, we cried, we healed, and we
+          still never left each other. Every hard day made our bond stronger.
+        </p>
+        <div class="photo-grid" id="photos-2021"></div>
+      </div>
+
+      <div class="emotional-pause">
+        In the quiet between the hard days and the healing days, we chose each
+        other — softly, stubbornly, again and again.
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2022 🌍</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          By God’s grace, we were finally in the same city — Indore. First real
+          meetups, slow walks, and shared chai — us in one place felt like a
+          miracle.
+        </p>
+        <div class="photo-grid" id="photos-2022"></div>
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2023 ✨</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          Our bond grew stronger every day — more time, more understanding, and
+          more support. Friendship to soulmates, laughter to forever.
+        </p>
+        <div class="photo-grid" id="photos-2023"></div>
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2024 ♾️</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          More than three years together in Indore — routines, tiny surprises,
+          and a love that only deepened. The ordinary moments became our magic.
+        </p>
+        <div class="photo-grid" id="photos-2024"></div>
+      </div>
+
+      <div class="timeline-item">
+        <h2 class="text-3xl font-semibold mb-4 glow-text">2025 💫</h2>
+        <p class="text-neutral-300 mb-6 max-w-xl">
+          We fought, we loved, we cried — and still, always chose each other. Us
+          is my favorite place in the world, now and always.
+        </p>
+        <div class="photo-grid" id="photos-2025"></div>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY MESSAGE -->
+    <section
+      id="birthday"
+      class="bg-neutral-900/70 py-24 px-6 text-center relative z-10"
+    >
+      <h2 class="text-4xl font-bold mb-6 glow-text">
+        And today… it’s your day ❤️
+      </h2>
+      <p class="text-neutral-200 max-w-2xl mx-auto leading-relaxed">
+        Happy Birthday, my love. Aditi — my Kismiss — you are my partner, my
+        best friend, and my home.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4">
+        <button
+          id="wishBtn"
+          class="cta-btn px-6 py-2 rounded-full border border-neutral-700 hover:bg-neutral-800 transition text-sm"
+        >
+          Make a Wish 🎂
+        </button>
+        <button
+          id="holdBtn"
+          class="cta-btn hold-btn px-6 py-2 rounded-full border border-neutral-700 hover:bg-neutral-800 transition text-sm"
+        >
+          Hold my hand 🤍
+        </button>
+        <div id="holdMessage" class="hold-message">
+          In every storm and every calm, I’m here — holding you, always.
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 relative z-10">
+      <p class="handwritten-note">
+        If the world went quiet, I’d still hear you in every heartbeat. Thank
+        you for choosing me through every distance, every storm, and every
+        ordinary day — you are my safest place, my forever.
+      </p>
+    </section>
+
+    <!-- ENDING -->
+    <section class="py-24 text-center px-6 relative z-10">
+      <p class="text-xl text-neutral-300 mb-6">
+        This is not the end of our story. It’s just another beautiful chapter.
+      </p>
+      <button
+        class="cta-btn px-7 py-3 rounded-full border border-neutral-600 hover:bg-neutral-800 transition"
+      >
+        To Many More Birthdays Together ❤️
+      </button>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
+    >
+      <div class="flex flex-col items-center">
+        <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] rounded-xl" />
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <div id="wishOverlay" class="wish-overlay">
+      <div class="wish-card">
+        <div class="wish-heart">💗</div>
+        <div class="wish-candle">
+          <div class="wish-flame"></div>
+        </div>
+        <p class="wish-text">
+          Your wish is safe with me. I’m making mine too — forever us.
+        </p>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+      // Smooth scroll
+      document.getElementById("startJourney").onclick = () => {
+        document
+          .getElementById("journey")
+          .scrollIntoView({ behavior: "smooth" });
+      };
+
+      // Calm mode after hero
+      const heroSection = document.querySelector("section");
+      let heroThreshold = 0;
+      let calmTicking = false;
+
+      const computeHeroThreshold = () => {
+        if (!heroSection) return;
+        heroThreshold = heroSection.offsetTop + heroSection.offsetHeight;
+      };
+
+      const toggleCalmMode = () => {
+        if (!heroSection || calmTicking) return;
+        calmTicking = true;
+        window.requestAnimationFrame(() => {
+          document.body.classList.toggle(
+            "calm-mode",
+            window.scrollY >= heroThreshold,
+          );
+          calmTicking = false;
+        });
+      };
+
+      computeHeroThreshold();
+      window.addEventListener("scroll", toggleCalmMode, { passive: true });
+      window.addEventListener("resize", () => {
+        computeHeroThreshold();
+        toggleCalmMode();
+      });
+      toggleCalmMode();
+
+      // Relationship duration counter (start date: 2018-08-25)
+      const loveCounter = document.getElementById("loveCounter");
+      const relationshipStart = new Date(2018, 7, 25, 0, 0, 0, 0);
+
+      const diffYMD = (start, end) => {
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
+        let days = end.getDate() - start.getDate();
+
+        if (days < 0) {
+          const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+          days += prevMonth.getDate();
+          months -= 1;
+        }
+
+        if (months < 0) {
+          months += 12;
+          years -= 1;
+        }
+
+        return { years, months, days };
+      };
+
+      const updateLoveCounter = () => {
+        if (!loveCounter) return;
+        const now = new Date();
+        const { years, months, days } = diffYMD(relationshipStart, now);
+        const yearText = years === 1 ? "year" : "years";
+        const monthText = months === 1 ? "month" : "months";
+        const dayText = days === 1 ? "day" : "days";
+        loveCounter.textContent = `Our time together: ${years} ${yearText}, ${months} ${monthText}, ${days} ${dayText}`;
+      };
+
+      updateLoveCounter();
+      setInterval(updateLoveCounter, 1000);
+
+      // CONFIG: list image names per year
+      const photosByYear = {
+        2018: ["6.jpg"],
+        2019: [],
+        2020: ["7.jpg", "8.jpg", "9.jpg"],
+        2021: ["10.jpg", "11.jpg", "26.jpg", "27.jpg", "3.jpg"],
+        2022: ["21.jpg", "22.jpg", "23.jpg"],
+        2023: [
+          "12.jpg",
+          "13.jpg",
+          "14.jpg",
+          "19.jpg",
+          "20.jpg",
+          "24.jpg",
+          "25.jpg",
+          "30.jpg",
+          "4.jpg",
+        ],
+        2024: ["1.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "29.jpg"],
+        2025: ["21.jpeg", "22.jpeg", "23.jpeg", "24.jpeg"],
+      };
+
+      // Render photos
+      const disableTilt = window.matchMedia(
+        "(hover: none), (pointer: coarse)",
+      ).matches;
+      Object.entries(photosByYear).forEach(([year, files]) => {
+        const container = document.getElementById(`photos-${year}`);
+        if (!container) return;
+
+        const maxVisible = 6;
+        files.forEach((file, index) => {
+          const frame = document.createElement("div");
+          frame.className = "photo-frame";
+          if (index >= maxVisible) {
+            frame.classList.add("photo-hidden");
+          }
+
+          const inner = document.createElement("div");
+          inner.className = "photo-inner";
+
+          const img = document.createElement("img");
+          img.src = `photos/${year}/${file}`;
+          img.loading = "lazy";
+          img.className = "photo-card";
+
+          const overlay = document.createElement("div");
+          overlay.className = "photo-overlay";
+
+          const caption = document.createElement("div");
+          caption.className = "photo-caption";
+          caption.textContent = `${year} • Memory ${index + 1}`;
+
+          overlay.appendChild(caption);
+          inner.appendChild(img);
+          inner.appendChild(overlay);
+          frame.appendChild(inner);
+          container.appendChild(frame);
+
+          if (!disableTilt) {
+            const maxTilt = 6;
+            let frameRect = null;
+            let tiltRaf = 0;
+            let lastX = 0;
+            let lastY = 0;
+
+            frame.addEventListener(
+              "mouseenter",
+              () => {
+                frameRect = frame.getBoundingClientRect();
+              },
+              { passive: true },
+            );
+
+            frame.addEventListener(
+              "mousemove",
+              (event) => {
+                lastX = event.clientX;
+                lastY = event.clientY;
+                if (tiltRaf) return;
+                tiltRaf = window.requestAnimationFrame(() => {
+                  if (!frameRect) return;
+                  const x = (lastX - frameRect.left) / frameRect.width - 0.5;
+                  const y = (lastY - frameRect.top) / frameRect.height - 0.5;
+                  frame.style.transform = `perspective(700px) rotateX(${(
+                    -y * maxTilt
+                  ).toFixed(
+                    2,
+                  )}deg) rotateY(${(x * maxTilt).toFixed(2)}deg) translateY(-4px)`;
+                  tiltRaf = 0;
+                });
+              },
+              { passive: true },
+            );
+
+            frame.addEventListener(
+              "mouseleave",
+              () => {
+                frameRect = null;
+                if (tiltRaf) {
+                  window.cancelAnimationFrame(tiltRaf);
+                  tiltRaf = 0;
+                }
+                frame.style.transform =
+                  "perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0)";
+              },
+              { passive: true },
+            );
+          }
+        });
+
+        if (files.length > maxVisible) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className =
+            "cta-btn mt-6 px-6 py-2 rounded-full border border-neutral-700 hover:bg-neutral-800 transition text-sm";
+          button.textContent = "Show more memories";
+
+          button.addEventListener("click", () => {
+            container
+              .querySelectorAll(".photo-hidden")
+              .forEach((el) => el.classList.remove("photo-hidden"));
+            button.remove();
+          });
+
+          container.parentElement?.appendChild(button);
+        }
+      });
+
+      // Lightbox
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+
+      const openLightbox = (src, captionText = "") => {
+        lightboxImg.src = src;
+        lightboxCaption.textContent = captionText;
+        lightbox.classList.remove("hidden");
+        lightbox.classList.add("flex");
+      };
+
+      const closeLightbox = () => {
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+      };
+
+      // Love meter
+      const loveSlider = document.getElementById("loveSlider");
+      const loveMessage = document.getElementById("loveMessage");
+      const loveNotes = [
+        "0% — still loading…",
+        "25% — butterflies activated.",
+        "50% — best friends energy.",
+        "75% — heart full.",
+        "100% — soulmate level unlocked.",
+      ];
+
+      const updateLove = () => {
+        const value = Number(loveSlider.value);
+        const index = Math.min(4, Math.floor(value / 25));
+        loveMessage.textContent = `${value}% — ${loveNotes[index]}`;
+      };
+
+      loveSlider.addEventListener("input", updateLove);
+      updateLove();
+
+      // Surprise confetti
+      const surpriseBtn = document.getElementById("surpriseBtn");
+      const confettiIcons = ["❤", "💖", "💗", "💞", "✨", "💘"];
+
+      const popConfetti = () => {
+        for (let i = 0; i < 20; i += 1) {
+          const span = document.createElement("span");
+          span.className = "confetti-heart";
+          span.textContent =
+            confettiIcons[Math.floor(Math.random() * confettiIcons.length)];
+          span.style.left = `${Math.random() * 100}vw`;
+          span.style.top = `${60 + Math.random() * 30}vh`;
+          span.style.animationDelay = `${Math.random() * 0.4}s`;
+          document.body.appendChild(span);
+          setTimeout(() => span.remove(), 2400);
+        }
+      };
+
+      surpriseBtn.addEventListener("click", popConfetti);
+
+      // Make a wish
+      const wishBtn = document.getElementById("wishBtn");
+      const wishOverlay = document.getElementById("wishOverlay");
+
+      if (wishBtn && wishOverlay) {
+        wishBtn.addEventListener("click", () => {
+          wishOverlay.classList.add("active");
+        });
+
+        wishOverlay.addEventListener("click", (event) => {
+          if (event.target === wishOverlay) {
+            wishOverlay.classList.remove("active");
+          }
+        });
+      }
+
+      // Hold my hand (long press)
+      const holdBtn = document.getElementById("holdBtn");
+      const holdMessage = document.getElementById("holdMessage");
+      let holdTimer = null;
+      let holdTriggered = false;
+
+      const startHold = () => {
+        if (!holdBtn || !holdMessage) return;
+        holdTriggered = false;
+        holdBtn.classList.add("hold-active");
+        holdTimer = window.setTimeout(() => {
+          holdTriggered = true;
+          holdMessage.classList.add("show");
+        }, 800);
+      };
+
+      const endHold = () => {
+        if (!holdBtn) return;
+        if (holdTimer) {
+          window.clearTimeout(holdTimer);
+          holdTimer = null;
+        }
+        holdBtn.classList.remove("hold-active");
+      };
+
+      if (holdBtn) {
+        holdBtn.addEventListener("pointerdown", (event) => {
+          event.preventDefault();
+          if (holdBtn.setPointerCapture) {
+            holdBtn.setPointerCapture(event.pointerId);
+          }
+          startHold();
+        });
+        holdBtn.addEventListener("pointerup", endHold);
+        holdBtn.addEventListener("pointerleave", endHold);
+        holdBtn.addEventListener("pointercancel", endHold);
+
+        holdBtn.addEventListener("mousedown", (event) => {
+          event.preventDefault();
+          startHold();
+        });
+        holdBtn.addEventListener("mouseup", endHold);
+        holdBtn.addEventListener("mouseleave", endHold);
+
+        holdBtn.addEventListener(
+          "touchstart",
+          (event) => {
+            event.preventDefault();
+            startHold();
+          },
+          { passive: false },
+        );
+        holdBtn.addEventListener("touchend", endHold);
+        holdBtn.addEventListener("touchcancel", endHold);
+      }
+
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("photo-card")) {
+          openLightbox(e.target.src, "");
+        }
+      });
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !lightbox.classList.contains("hidden")) {
+          closeLightbox();
+        }
+      });
+
+      // Random memory button
+      const randomMemoryBtn = document.getElementById("randomMemoryBtn");
+      if (randomMemoryBtn) {
+        const allPhotos = Object.entries(photosByYear).flatMap(
+          ([year, files]) => files.map((file) => `photos/${year}/${file}`),
+        );
+
+        randomMemoryBtn.addEventListener("click", () => {
+          if (!allPhotos.length) return;
+          const randomSrc =
+            allPhotos[Math.floor(Math.random() * allPhotos.length)];
+          openLightbox(randomSrc, "One random moment I’ll never forget");
+        });
+      }
+
+      // Scroll reveal
+      const items = document.querySelectorAll(".timeline-item");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0", "translate-y-10");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+
+      items.forEach((item, index) => {
+        item.classList.add(
+          "opacity-0",
+          "translate-y-10",
+          "transition",
+          "duration-700",
+        );
+        item.style.transitionDelay = `${index * 80}ms`;
+        observer.observe(item);
+      });
+    </script>
+  </body>
+</html>
